@@ -1,0 +1,6 @@
+- name : Configure Docker on EC2 Instances
+  hosts : localhost
+  connection : ssh
+  tasks : 
+  - name: Deploy Docker Container
+    command: docker run -itd -p 8084:8081 anujsharma1990/insure-me:3.0

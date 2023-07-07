@@ -13,7 +13,7 @@ pipeline{
         stage('Build Docker Image'){
             steps{
                 script{
-                    sh 'docker build -t kotianrakshith/tempapp .'
+                    sh 'docker build -t kotianrakshith/insuranceapp .'
                 }
             }
         }
@@ -23,7 +23,7 @@ pipeline{
                     withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpassword')]) {
                     sh 'docker login -u kotianrakshith -p ${dockerhubpassword}'
 
-                    sh 'docker push kotianrakshith/tempapp'
+                    sh 'docker push kotianrakshith/insuranceapp'
                     }
                 }
             }

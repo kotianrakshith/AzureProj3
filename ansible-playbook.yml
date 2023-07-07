@@ -3,13 +3,13 @@
   tasks:
     - name: Stop Container if any
       docker_container:
-        name: tempapp
+        name: insuranceapp
         state: stopped
       ignore_errors: true
-    - name: deploy testapp docker container
+    - name: deploy insuranceapp docker container
       docker_container:
-        image: docker.io/kotianrakshith/tempapp
-        name: tempapp
+        image: docker.io/kotianrakshith/insuranceapp
+        name: insuranceapp
         state: started
         auto_remove: true
         ports:

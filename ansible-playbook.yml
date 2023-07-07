@@ -1,6 +1,11 @@
 ---
 - hosts: docker
   tasks:
+    - name: Stop Container if any
+      docker_container:
+        name: tempapp
+        state: stopped
+      ignore_errors: true
     - name: deploy testapp docker container
       docker_container:
         image: docker.io/kotianrakshith/tempapp

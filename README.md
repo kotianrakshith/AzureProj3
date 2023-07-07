@@ -1,8 +1,3 @@
+Insurance company Application Deployment using Jenkins, Ansible, Docker and AWS EC2 instance
 
-
-This project will help you to understand various concept related to Insurace domain. Please read the Insurace-domain.pdf to get more functional knowledge on 
-Insurace domain. 
-
-This project front is based on simple HTML, CSS and Angular Js ad Backend is Java Spring Boot.
-
-In order to run the application use port 8081..
+source code for the java application is provided by the simplilearn team. The Jenkinsfile, Ansible playbook, Dockerfile was built by me.

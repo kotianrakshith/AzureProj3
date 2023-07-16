@@ -26,3 +26,13 @@ steps:
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: 
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'capstonevm'
+    runOptions: 'commands'
+    commands: |
+      docker stop insuranceapp
+      docker rm insuranceapp
+      docker run -itd -p 8081:8081 --name insuranceapp kotianrakshith.azurecr.io/insuranceapp
+    failOnStdErr: false
+    readyTimeout: '20000'

@@ -1,3 +1,1 @@
-Insurance company Application Deployment using Jenkins, Ansible, Docker and AWS EC2 instance
-
-source code for the java application is provided by the simplilearn team. The Jenkinsfile, Ansible playbook, Dockerfile was built by me.
+e have deployed insurance application in capstone project2 using jenkins, github, dockerhub,docker in AWS EC2 Machine, we will take the same application and deploy through Azure Devops, Azure Repos, Azure container registry, docker in EC2 machine.

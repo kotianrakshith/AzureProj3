@@ -29,8 +29,8 @@ steps:
 - task: SSH@0
   inputs:
     sshEndpoint: 'capstonevm'
-    runOptions: 'commands'
-    commands: |
+    runOptions: 'inline'
+    inline: |
       docker stop insuranceapp 2>/dev/null
       docker rm insuranceapp 2>/dev/null
       docker run -itd -p 8081:8081 --name insuranceapp kotianrakshith.azurecr.io/insuranceapp

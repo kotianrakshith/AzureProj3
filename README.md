@@ -4,7 +4,7 @@ We have deployed insurance application in capstone project2 using jenkins, githu
 
 We will create a new project in Azure DevOps and then go to Repo and click on Import a Repository:
 
-![](Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.001.png)
+![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.001.png)
 
 We have already created gihub repo for the capstone2 project: 
 

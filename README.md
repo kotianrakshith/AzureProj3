@@ -12,11 +12,11 @@ We have already created gihub repo for the capstone2 project:
 
 We will import this:
 
-![](Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.002.png)
+![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.002.png)
 
 We can see after the import all the files are imported:
 
-![](Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.003.png)
+![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.003.png)
 
 (Later we will delete all the files not needed ex. Jenkinsfile,ansible playbook)
 
@@ -24,17 +24,17 @@ We can see after the import all the files are imported:
 
 `           `We wiill go to pipeline and create a new pipeline:
 
-![](Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.004.png)
+![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.004.png)
 
 Then select your repo and the code:
 
-![](Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.005.png)
+![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.005.png)
 
-![](Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.006.png)
+![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.006.png)
 
 Then we will chose maven and only chose package:
 
-![](Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.007.png)
+![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.007.png)
 
 ![](Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.008.png)
 

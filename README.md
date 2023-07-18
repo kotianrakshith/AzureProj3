@@ -1,4 +1,4 @@
-# Deployment of java application through Azure Devops, Azure Repos, Azure container registry, Docker in EC2 machine
+# Deployment of Java application through Azure Devops Pipeline, Azure Repos, ACR, Docker in VM.
 
 We have deployed insurance application in capstone project2 using jenkins, github, dockerhub,docker in AWS EC2 Machine, we will take the same application and deploy through Azure Devops, Azure Repos, Azure container registry, docker in EC2 machine.
 
@@ -22,7 +22,7 @@ We can see after the import all the files are imported:
 
 (Later we will delete all the files not needed ex. Jenkinsfile,ansible playbook)
 
-##**2. Build the java application**
+## **2. Build the java application**
 
 We wiill go to pipeline and create a new pipeline:
 
@@ -48,7 +48,7 @@ Now lets save and run:
 
 ![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.010.png)
 
-As Im using self hosted agent it will ask for permision:
+As I'm using self hosted agent it will ask for permision:
 
 ![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.011.png)
 
@@ -56,8 +56,7 @@ Once you permit, it will run and we can see that it has sucessfully run and mave
 
 ![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.012.png)
 
-## **3. Build and push the image to azure container registry
-**
+## **3. Build and push the image to azure container registry**
 First let us create a container registry:
 
 Go to container registries in azure portal and click create container registry:
@@ -136,12 +135,12 @@ Now let us install docker.
 
 First we upgrade the system
 
-'sudo apt update && sudo apt upgrade -y'
+`sudo apt update && sudo apt upgrade -y`
 
 ![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.030.png)
 
 Now we install the packages, keys, required repositories:
-'''
+```
 sudo apt install ca-certificates curl gnupg lsb-release
 
 sudo mkdir -p /etc/apt/keyrings
@@ -149,20 +148,20 @@ sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb\_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-'''
+```
 ![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.031.png)
 
 Now run the update command again('sudo apt update')
 
 Now install the docker ce:
-'
+`
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-'
+`
 ![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.032.png)
 
 Now check the docker version:
 
-'docker -v'
+`docker -v`
 
 ![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.033.png)
 
@@ -172,9 +171,9 @@ If you check the docker you see it is running:
 
 Then you can add your user for docker group(This may not be needed, but if you use different user it is helpful)
 
-'sudo usermod -aG docker $USER'
+`sudo usermod -aG docker $USER`
 
-Then reload the session using command: 'newgrp docker'
+Then reload the session using command: `newgrp docker`
 
 ![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.035.png)
 
@@ -186,7 +185,7 @@ First we will go to access keys and enable admin user which will give us usernam
 
 We wll use this to login to login server.
 
-'docker login kotianrakshith.azurecr.io'
+`docker login kotianrakshith.azurecr.io`
 
 ![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.037.png)
 
@@ -215,13 +214,13 @@ Go to the pipline and edit the pipeline. Search for SSH:
 ![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.041.png)
 
 We will select the service connection we added and add following command as a scirpt:
-'''
+```
 docker stop insuranceapp 2>/dev/null
 
 docker rm insuranceapp 2>/dev/null
 
 docker run -itd -p 8081:8081 --name insuranceapp kotianrakshith.azurecr.io/insuranceapp 
-'''
+```
 (We need stop and rm if we want to run this pipeline repeatedly as once run there will be container present and we are using  2>/dev/null so it can ignore the errors)
 
 ![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.042.png)![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.043.png)
@@ -238,12 +237,12 @@ First lets go and check the VM if the app is deployed in docker:
 
 ![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.045.png)
 
-We can see from ‘docker ps’ command that it has been created and running correctly.
+We can see from `docker ps` command that it has been created and running correctly.
 
 Now let us access the app and check. To access it we need to use ip:port so here it is
-'''
+```
 <http://20.115.123.210:8081/>
-'''
+```
 We can see that we are able to access it correctly:
 
 ![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.046.png)

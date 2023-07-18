@@ -12,11 +12,11 @@ We have already created gihub repo for the capstone2 project:
 
 We will import this:
 
-![](/readmeimages/Images//readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.002.png)
+![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.002.png)
 
 We can see after the import all the files are imported:
 
-![](/readmeimages/Images//readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.003.png)
+![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.003.png)
 
 (Later we will delete all the files not needed ex. Jenkinsfile,ansible playbook)
 

@@ -1,4 +1,6 @@
-# We have deployed insurance application in capstone project2 using jenkins, github, dockerhub,docker in AWS EC2 Machine, we will take the same application and deploy through Azure Devops, Azure Repos, Azure container registry, docker in EC2 machine.
+# Deployment of java application through Azure Devops, Azure Repos, Azure container registry, Docker in EC2 machine
+
+We have deployed insurance application in capstone project2 using jenkins, github, dockerhub,docker in AWS EC2 Machine, we will take the same application and deploy through Azure Devops, Azure Repos, Azure container registry, docker in EC2 machine.
 
 ## 1. Import the resository:
 

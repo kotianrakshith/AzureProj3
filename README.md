@@ -1,6 +1,6 @@
 # Deployment of Java application through Azure Devops Pipeline, Azure Repos, ACR, Docker in VM.
 
-We have deployed insurance application in capstone project2 using jenkins, github, dockerhub,docker in AWS EC2 Machine, we will take the same application and deploy through Azure Devops, Azure Repos, Azure container registry, docker in EC2 machine.
+We have deployed insurance application in capstone project2 using jenkins, github, dockerhub,docker in AWS EC2 Machine, we will take the same application and deploy through Azure Devops, Azure Repos, Azure container registry, docker in VM machine. I have done the below steps to complete this project:
 
 ## **1. Import the resository:**
 
@@ -249,4 +249,4 @@ We can see that we are able to access it correctly:
 
 ![](/readmeimages/Images/Aspose.Words.c66ae028-478c-44e6-9bf2-5ceed97b39a7.047.png)
 
-That completes this project. We have used the same code from capstone1 but we have used azure tools like Azure Devops, Azure Repos, Azure container registry, docker in EC2 machine to achive the same results much easily.
+That completes this project. We have used the same code from capstone2 but we have used azure tools like Azure Devops, Azure Repos, Azure container registry, docker in VM machine to achive the same results much easily.
